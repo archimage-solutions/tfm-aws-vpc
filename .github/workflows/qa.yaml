@@ -1,0 +1,15 @@
+name: QA
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate-terraform-module:
+    uses: archimage-solutions/git-shared-workflows/.github/workflows/validate-terraform-module.yaml@main
+    secrets: inherit
+  lint-terraform-module:
+    uses: archimage-solutions/git-shared-workflows/.github/workflows/lint-terraform-module.yaml@main
+    secrets: inherit
+  vuln-scan-terraform-module:
+    uses: archimage-solutions/git-shared-workflows/.github/workflows/vuln-scan-terraform-module.yaml@main
+    secrets: inherit

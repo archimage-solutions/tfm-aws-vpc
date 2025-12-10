@@ -1,0 +1,12 @@
+{
+  "packages": {
+    ".": {
+      "labels": [
+        "autorelease: pending"
+      ],
+      "bumpPatchForMinorPreMajor": true,
+      "release-type": "simple",
+      "changelog-path": "CHANGELOG.md"
+    }
+  }
+}

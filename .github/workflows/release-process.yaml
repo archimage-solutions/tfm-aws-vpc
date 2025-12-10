@@ -1,0 +1,38 @@
+###############################################################################
+# This action manages the whole release process using google's release-please
+# action.
+#
+# PROCESS
+#
+# 1. Developers raise PRs against main using semantic commit messages.
+#
+# 2. When developer PRs are merged release please finds all commits that make
+#    changes and calculates a new semantic version and changelog. 
+#    It then raises a PR with an updated version in release-please-manifest.json and 
+#    updated CHANGELOG.md. release-please will continue to update its PR as new developer 
+#    PRs are merged to main.
+#
+# 3. When the release PR is merged release-please will tag the repository and
+#    create a GitHub release.
+###############################################################################
+name: Release process
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - "main"
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write      # May be needed for issue interactions
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: googleapis/release-please-action@v4
+        id: release
+        with:
+          config-file: .github/release-please-config.json
+          manifest-file: .github/release-please-manifest.json
