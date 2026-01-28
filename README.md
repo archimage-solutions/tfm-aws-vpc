@@ -1,20 +1,5 @@
-# Terraform module template
-
-This template provides:
-
-* The terraform [standard](https://developer.hashicorp.com/terraform/language/modules/develop/structure) module structure
-* The addition of a versions.tf for recording any required providers and versions
-* A QA workflows for PR validation which includes:
-    * `terraform fmt`, `terraform init` and `terraform validate`
-    * Linting with `tflint`
-    * Misconfiguration scanning with `trivy config`
-* A release workflow using `release-please`
-
-## Usage
-
-* Terraform modules *MUST* be prefixed `tfm-`
-* The module *COULD* be prefixed `tfm-aws` if it makes sense in the context of usage
-* Use `terraform-docs markdown --output-file README.md --output-mode inject .` to generate up-to-date documentation
+# AWS VPC Module
+This module supports subnet sharing across and AWS organization.
 
 
 <!-- BEGIN_TF_DOCS -->
