@@ -16,8 +16,8 @@ module "example" {
 
   single_nat_gateway = false
 
-  share_private_subnets_principals = ["535319026954"]
-  share_public_subnets_principals  = ["535319026954"]
+  share_private_subnets_principals = []
+  share_public_subnets_principals  = []
 
   secondary_subnets = {
     "dev" = {
@@ -153,8 +153,8 @@ module "example" {
           to_port     = 65535
         }
       ]
-      shared_public_subnet_principals  = ["535319026954"]
-      shared_private_subnet_principals = ["535319026954"]
+      shared_public_subnet_principals  = []
+      shared_private_subnet_principals = []
     }
     "prod" = {
       cidr_range        = "10.242.0.0/16"
