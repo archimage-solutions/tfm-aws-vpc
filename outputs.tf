@@ -29,7 +29,7 @@ output "public_subnets" {
 
 output "services_subnets" {
   description = "List of IDs of private subnets"
-  value       = try(aws_subnet.service_subnet[*].id, null)
+  value       = [for s in aws_subnet.service_subnet : s.id]
 }
 
 output "secondary_public_subnets" {
