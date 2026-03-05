@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/archimage-solutions/tfm-aws-vpc/compare/v1.0.2...v1.0.3) (2026-03-05)
+
+
+### Bug Fixes
+
+* **vpc-endpoints:** Fixing services subnet references in VPC endpoint creation ([7a6ccaf](https://github.com/archimage-solutions/tfm-aws-vpc/commit/7a6ccaff59ae49481a10d17ae3f07fe7e9b7013d))
+
 ## [1.0.2](https://github.com/archimage-solutions/tfm-aws-vpc/compare/v1.0.1...v1.0.2) (2026-02-27)
 
 
