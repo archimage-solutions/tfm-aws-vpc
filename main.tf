@@ -183,7 +183,7 @@ locals {
     for service_name in var.endpoint_services : replace(service_name, ".", "-") => {
       service             = service_name
       private_dns_enabled = true
-      subnet_ids          = var.create_services_subnets ? aws_subnet.service_subnet[*].id : module.vpc.private_subnets
+      subnet_ids          = var.create_services_subnets ? [for subnet in aws_subnet.service_subnet : subnet.id] : module.vpc.private_subnets
       tags                = { Name = "${replace(service_name, ".", "-")}-vpc-endpoint" }
     }
   }
