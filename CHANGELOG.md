@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.4](https://github.com/archimage-solutions/tfm-aws-vpc/compare/v1.0.3...v1.0.4) (2026-07-29)
+
+
+### Bug Fixes
+
+* **vpc:** Pin version of provider due to bug in 6.57 ([17311e7](https://github.com/archimage-solutions/tfm-aws-vpc/commit/17311e767922fd1429e22a957b7be29d7d1033e1))
+* **vpc:** Pin version of provider due to bug in 6.57 ([8cede93](https://github.com/archimage-solutions/tfm-aws-vpc/commit/8cede9317a0aa41bdcaec7ed5b11f85920c0a366))
+
 ## [1.0.3](https://github.com/archimage-solutions/tfm-aws-vpc/compare/v1.0.2...v1.0.3) (2026-03-05)
 
 
